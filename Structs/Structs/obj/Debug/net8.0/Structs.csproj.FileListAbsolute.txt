@@ -1,0 +1,15 @@
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\bin\Debug\net8.0\Structs.exe
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\bin\Debug\net8.0\Structs.deps.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\bin\Debug\net8.0\Structs.runtimeconfig.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\bin\Debug\net8.0\Structs.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\bin\Debug\net8.0\Structs.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\Structs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\Structs.AssemblyInfoInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\Structs.AssemblyInfo.cs
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\Structs.csproj.CoreCompileInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\Structs.sourcelink.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\Structs.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\refint\Structs.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\Structs.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\Structs.genruntimeconfig.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Structs\Structs\obj\Debug\net8.0\ref\Structs.dll

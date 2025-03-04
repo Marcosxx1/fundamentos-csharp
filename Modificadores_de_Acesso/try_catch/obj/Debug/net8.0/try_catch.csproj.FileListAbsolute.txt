@@ -1,0 +1,15 @@
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\bin\Debug\net8.0\try_catch.exe
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\bin\Debug\net8.0\try_catch.deps.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\bin\Debug\net8.0\try_catch.runtimeconfig.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\bin\Debug\net8.0\try_catch.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\bin\Debug\net8.0\try_catch.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\try_catch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\try_catch.AssemblyInfoInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\try_catch.AssemblyInfo.cs
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\try_catch.csproj.CoreCompileInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\try_catch.sourcelink.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\try_catch.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\refint\try_catch.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\try_catch.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\try_catch.genruntimeconfig.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Modificadores_de_Acesso\try_catch\obj\Debug\net8.0\ref\try_catch.dll
