@@ -2,8 +2,9 @@
 - [Diferença entre `ref` e `out`](#diferença-entre-ref-e-out)
 - [Parâmetros Nomeados](#parâmetros-nomeados)
 - [Métodos e Propriedades Estáticas](#métodos-e-propriedades-estáticas)
+- [List e ArrayList](#list-e-arraylist)
+- [`List<T>` e principais métodos de consultas LINQ](#listt-e-principais-métodos-deconsultas-linq)
 
- 
 dotnet --list-sdks lsitar os sdks
 
 Podemos escolher a versão do sdk criando um arquivo **global.json** na raiz da pasta
@@ -16,11 +17,11 @@ Podemos escolher a versão do sdk criando um arquivo **global.json** na raiz da 
 }
 ```
 
-Caso nenhum arquivo global.json for encontrado, ou o arquivo globaljson não especificar uma versãodo SDK, a versão 
+Caso nenhum arquivo global.json for encontrado, ou o arquivo globaljson não especificar uma versãodo SDK, a versão
 **mais recente do SDK instalada será utilizada**
 
- 
 ### **Explicando`ref`**
+
 No C#, a palavra-chave `ref` permite que um **parâmetro seja passado por referência**, ou seja, em vez
 de passar apenas uma cópia do valor da variável, passamos um **referência para a variável original**.
 Isso significa que qualquer alteração feita no parâmetro dentro do método **afeta diretamente a variável
@@ -53,38 +54,40 @@ class Program
 ```
 
 ### **Saída esperada:**
+
 ```plaintext
 O valor original é 10
 O valor dobrado é 20
 O valor depois da chamada é 20
 ```
+
 Noteemos que `valor` foi **modificado diretamente**, porque foi passado por referência.
 
 ---
 
 ### **É igual a ponteiros?**
+
 Não exatamente. Aqui estão algumas diferenças:
 
-| **Característica** | `ref` em C# | Ponteiros em C |
-|-------------------|------------|---------------|
-| **Tipo de dado** | Trabalha com tipos por valor e referência | Trabalha diretamente com endereços de memória |
-| **Sintaxe** | Usa `ref` antes do argumento no método e na chamada | Usa `*` para declarar e `&` para obter o endereço |
-| **Segurança** | Mais seguro, gerenciado pelo .NET | Risco de manipular memória diretamente |
-| **Necessidade de inicialização** | O argumento passado com `ref` deve estar inicializado | Pode apontar para `NULL` |
-| **Controle de memória** | O .NET gerencia automaticamente | O programador precisa liberar memória manualmente |
-
-
+| **Característica**               | `ref` em C#                                           | Ponteiros em C                                    |
+|----------------------------------|-------------------------------------------------------|---------------------------------------------------|
+| **Tipo de dado**                 | Trabalha com tipos por valor e referência             | Trabalha diretamente com endereços de memória     |
+| **Sintaxe**                      | Usa `ref` antes do argumento no método e na chamada   | Usa `*` para declarar e `&` para obter o endereço |
+| **Segurança**                    | Mais seguro, gerenciado pelo .NET                     | Risco de manipular memória diretamente            |
+| **Necessidade de inicialização** | O argumento passado com `ref` deve estar inicializado | Pode apontar para `NULL`                          |
+| **Controle de memória**          | O .NET gerencia automaticamente                       | O programador precisa liberar memória manualmente |
 
 ## **Diferença entre `ref` e `out`**
-| Característica  | `ref`  | `out`  |
-|----------------|--------|--------|
-| **Passagem por referência?** | ✅ Sim | ✅ Sim |
-| **A variável precisa ser inicializada antes da chamada?** | ✅ Sim | ❌ Não |
-| **O método precisa obrigatoriamente atribuir um valor ao parâmetro?** | ❌ Não | ✅ Sim |
-| **Uso típico** | Modificar valores dentro do método e manter o original atualizado | Retornar múltiplos valores de um método |
+
+| Característica                                                        | `ref`                                                             | `out`                                   |
+|-----------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------------------|
+| **Passagem por referência?**                                          | ✅ Sim                                                             | ✅ Sim                                   |
+| **A variável precisa ser inicializada antes da chamada?**             | ✅ Sim                                                             | ❌ Não                                   |
+| **O método precisa obrigatoriamente atribuir um valor ao parâmetro?** | ❌ Não                                                             | ✅ Sim                                   |
+| **Uso típico**                                                        | Modificar valores dentro do método e manter o original atualizado | Retornar múltiplos valores de um método |
 
 ---
- 
+
 ```csharp
 public class Calculo
 {
@@ -116,6 +119,7 @@ class Program
 ```
 
 ### **Saída esperada**
+
 ```plaintext
 Perímetro da circunferência: 62.83185307179586
 A área é 314.1592653589793
@@ -123,12 +127,13 @@ A área é 314.1592653589793
 
 ---
 
- 
 ## **Quando usar `out`?**
+
 - Quando queremos **retornar múltiplos valores de um método** sem precisar criar uma classe ou `Tuple`.
 - Quando **o valor passado não precisa estar inicializado** antes da chamada (diferente do `ref`).
 
 ✅ **Exemplo comum de uso:**
+
 ```csharp
 bool sucesso = int.TryParse("123", out int numero);
 if (sucesso)
@@ -136,12 +141,16 @@ if (sucesso)
     Console.WriteLine($"Número convertido: {numero}");
 }
 ```
-Aqui, `out` permite que `TryParse` **retorne um valor extra (o número convertido), além do booleano indicando sucesso ou falha.**
+
+Aqui, `out` permite que `TryParse` **retorne um valor extra (o número convertido), além do booleano indicando sucesso ou
+falha.**
 
 --- 
 
 ## Parâmetros Nomeados
-Os **parâmetros nomeados** nos permitem que passemos argumentos especificando o nome do parâmetro, **independentemente da ordem**.
+
+Os **parâmetros nomeados** nos permitem que passemos argumentos especificando o nome do parâmetro, **independentemente
+da ordem**.
 
 ```csharp
 public void ExibirMensagem(string nome, int idade)
@@ -154,6 +163,7 @@ ExibirMensagem(idade: 25, nome: "Carlos");
 ```
 
 **Vantagens:**
+
 - **Melhora a legibilidade** do código.
 - **Evita confusão** ao passar muitos parâmetros.
 - **Útil em métodos com muitos argumentos opcionais**.
@@ -191,7 +201,6 @@ Console.WriteLine(Exemplo.Contador); // Saída: 2
 
 ## Getters, Setters, Campos e Propriedades
 
-
 ```csharp
 public class Usuario
 {
@@ -223,8 +232,10 @@ Console.WriteLine(u.Nome);
 Está **chamando o getter da propriedade `Nome`**, que retorna o valor armazenado no campo privado `nome`.
 
 ### **🔹 Resumo**
+
 ✅ **O campo `nome` fica encapsulado** dentro da classe.  
-✅ **A propriedade `Nome` controla o acesso ao campo `nome`**, de forma parecida com os métodos `getNome()` e `setNome()` no Java.
+✅ **A propriedade `Nome` controla o acesso ao campo `nome`**, de forma parecida com os métodos `getNome()` e `setNome()`
+no Java.
 
 Se quiser, pode até adicionar validação no setter:
 
@@ -242,7 +253,7 @@ public string Nome
 ``` 
 
 ### Auto-property:
- 
+
 Quando usamos **auto-properties** em C#, como neste exemplo:
 
 ```csharp
@@ -252,11 +263,13 @@ public class Usuario
 }
 ```
 
-A grande diferença é que **não precisamos definir um campo privado manualmente**, pois o **C# cria automaticamente um campo oculto para armazenar o valor**.
+A grande diferença é que **não precisamos definir um campo privado manualmente**, pois o **C# cria automaticamente um
+campo oculto para armazenar o valor**.
 
 ---
 
 ## **🔹 Mas onde está o campo privado?**
+
 No caso de **auto-properties**, o compilador C# faz isso internamente. Ou seja, este código:
 
 ```csharp
@@ -281,11 +294,13 @@ public class Usuario
 }
 ```
 
-A única diferença é que no **auto-property** (`public string Nome { get; set; }`), o **campo privado é gerado automaticamente pelo compilador e não pode ser acessado diretamente**.
+A única diferença é que no **auto-property** (`public string Nome { get; set; }`), o **campo privado é gerado
+automaticamente pelo compilador e não pode ser acessado diretamente**.
 
 ---
 
 ## **🔹 O que muda no uso externo?**
+
 Nada! Ambas as abordagens funcionam do mesmo jeito:
 
 ```csharp
@@ -299,10 +314,12 @@ O **auto-property apenas evita código boilerplate**, tornando o código mais li
 ---
 
 ## **🔹 Quando usar auto-properties?**
+
 ✅ **Quando não precisa de validação ou lógica extra** no `get` e `set`.  
 ✅ **Quando quer um código mais enxuto** e mais fácil de manter.
 
 ### **Exemplo sem auto-property (com validação):**
+
 ```csharp
 public class Usuario
 {
@@ -322,6 +339,7 @@ public class Usuario
 ```
 
 ### **Exemplo com auto-property (sem validação):**
+
 ```csharp
 public class Usuario
 {
@@ -332,9 +350,10 @@ public class Usuario
 ---
 
 ## **🚀 Resumo Final**
-| **Abordagem**        | **Tem campo privado?** | **Tem getter/setter customizado?** | **Melhor uso** |
-|----------------------|----------------------|---------------------------------|----------------|
-| **Manual (`private + propriedade`)** | ✅ Sim, declarado explicitamente | ✅ Sim, podemos modificar o getter/setter | Quando precisa de lógica extra (ex.: validação) |
+
+| **Abordagem**                        | **Tem campo privado?**                              | **Tem getter/setter customizado?**       | **Melhor uso**                                      |
+|--------------------------------------|-----------------------------------------------------|------------------------------------------|-----------------------------------------------------|
+| **Manual (`private + propriedade`)** | ✅ Sim, declarado explicitamente                     | ✅ Sim, podemos modificar o getter/setter | Quando precisa de lógica extra (ex.: validação)     |
 | **Auto-property (`{ get; set; }`)**  | ✅ Sim, mas é gerado automaticamente pelo compilador | ❌ Não, é sempre um simples `get` e `set` | Quando quer um código mais limpo e sem lógica extra |
 
 ## Structs no C#
@@ -410,3 +429,81 @@ class Program
         Console.WriteLine($"Ponto: ({p1.X}, {p1.Y})");
     }
 }
+```
+
+## List e ArrayList
+
+O comportamento de **ArrayList**
+
+- Uma coleção ArrayList pode armazenar elementos de diversos tipos de dados: **Value types** E **Reference Types**
+- Qualquer tipo de referência ou valor que é adicionado a um **ArrayList** é implicitamente convertido para *
+  *System.Object**
+- Se ositems são _tipos devalor_, eles devem sofrer um **boxing** quando adicionado à coleção, e **unboxing**
+  quandoelessão recuperados
+- A _coersão_, (boxing e unboxing) são operações que degradam o desempenho, que pode ser significativo quando devemos
+  percorrer grandes coleções
+
+O comportamento de **List< T >**
+Comparado com o ArrayList(), podemos criar uma lista de itens usando a coleção de um tipo específico ao invés de usar o
+ArrayList()
+que além de ser mais seguro é também mais rápido, especialmente quando os items da lista são tipos de valor, ex:
+
+```c#
+//Arraylist
+ArrayList lista = new ArrayList();
+lista.Add(1);           // boxing
+lista.add(3);           // boxing
+
+
+// para recuperar o valor
+var elemento = lista[0]; // unboxing
+var item = (int)lista[1] // unboxing
+```
+
+```csharp
+//List<T> sem boxing e unboxing
+List<int> lista = new List<int>();
+lista.Add(1);
+lista.Add(3);
+
+var elemento = lista[0];
+int item = lista[1];
+```
+
+## `List<T>` e principais métodos deconsultas LINQ
+
+- `Any()`: Determina se qualquer elemento de uma sequência existe ou atende a uma condição. (Determina se a coleção
+  contém elementos)
+- `FirstOrDefault()`: Retorna o primeiro elemento da coleção que satisfaz uma condição opcional. Retorna o valor padrão
+  do tipo caso não encontre nenhum elemento
+- `OrderBy()`: Classifica os elementos na coleção em ordem crescente com base em uma determinada condição e retorna a
+  coleção classificada
+- `ToList`: Recebe um tipo IEnumerable e oconverte em um tipo `List`
+- `Where()`: Retorna todos os elementos da coleção que satisfazem uma determinada condição. (Execução adiada)
+
+### `List<T>` x `IEnumerable<T>`
+
+- **`IEnumerable<T>`** descreve um comportamento de iteração sobre uma coleção, enquanto **`List<T>`** implementa esse comportamento. Por exemplo:
+  - `public class List<T> : IList<T>, IList, IReadOnlyList<T>`
+  - `public interface IList<T> : ICollection<T>, IEnumerable<T>, IEnumerable`
+
+---
+
+#### Características do `IEnumerable<T>`:
+
+- **Somente leitura (Read-only)**: Não é possível alterar a coleção, apenas ler.
+- **Iteração**:
+  - Possui um método para retornar o próximo item da coleção.
+  - Não precisa carregar toda a coleção na memória de uma vez.
+  - Não sabe quantos elementos a coleção possui.
+  - Ao ser iterada em um laço `foreach`, ela vai retornando o próximo item até o fim da coleção.
+- **Execução adiada (Lazy Execution)**:
+  - O compilador adia a execução até que seja necessário, ou seja, somente é executada quando iterada, como em um laço `foreach`/`for` ou quando um valor é extraído.
+
+---
+
+#### Características da `List<T>`:
+
+- **Memória completa**: A `List<T>` possui toda a coleção na memória e sabe exatamente quantos itens ela contém.
+- **Acesso e alteração**:
+  - Implementa uma variedade de métodos que permitem acessar e alterar a coleção.
