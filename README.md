@@ -4,9 +4,11 @@
 - [Métodos e Propriedades Estáticas](#métodos-e-propriedades-estáticas)
 - [List e ArrayList](#list-e-arraylist)
 - [`List<T>` e principais métodos de consultas LINQ](#listt-e-principais-métodos-deconsultas-linq)
-- [Delegate](#delegate)
+- [Entendendo Delegates Multicast e Fila de Mensagens](#entendendo-delegates-multicast-e-fila-de-mensagens)
+- [Eventos em C# e o Uso de EventArgs](#eventos-em-c-e-o-uso-de-eventargs)
 
-dotnet --list-sdks lsitar os sdks
+
+- dotnet --list-sdks lsitar os sdks
 
 Podemos escolher a versão do sdk criando um arquivo **global.json** na raiz da pasta
 
@@ -510,4 +512,356 @@ int item = lista[1];
   - Implementa uma variedade de métodos que permitem acessar e alterar a coleção.
 
 
-## Delegate
+## Entendendo Delegates Multicast e Fila de Mensagens
+
+### Introdução
+
+Ao trabalhar com sistemas distribuídos ou mesmo dentro de uma aplicação, frequentemente nos deparamos com cenários onde uma única ação deve desencadear várias outras. Um exemplo comum disso é quando lidamos com **Message Queues (MQs)**, onde um evento publicado pode ser consumido por diferentes consumidores.
+
+Neste trecho, explicarei o conceito de **delegates multicast** em C# e sua relação com filas de mensagens, usando um exemplo prático de CRUD.
+
+---
+
+### O que são Delegates Multicast?
+
+Um **delegate multicast** é um tipo especial de delegate em C# que pode armazenar uma lista de métodos e chamá-los em sequência. É como se tivéssemos uma fila de consumidores que executam uma tarefa assim que recebem um evento.
+
+#### Como funciona?
+
+1. Criamos um delegate.
+2. Associamos vários métodos a ele.
+3. Quando invocamos o delegate, todos os métodos associados são executados na ordem em que foram adicionados.
+4. Podemos remover métodos do delegate a qualquer momento.
+
+Exemplo:
+
+```csharp
+public delegate void DelegateMulticast(string mensagem);
+
+public class Metodos
+{
+    public static void Metodo1(string mensagem) => Console.WriteLine($"Método 1: {mensagem}");
+    public static void Metodo2(string mensagem) => Console.WriteLine($"Método 2: {mensagem}");
+    public static void Metodo3(string mensagem) => Console.WriteLine($"Método 3: {mensagem}");
+}
+
+internal class Program
+{
+    public static void Main()
+    {
+        DelegateMulticast delMult = Metodos.Metodo1;
+        delMult += Metodos.Metodo2;
+        delMult += Metodos.Metodo3;
+        
+        delMult("Olá");
+        
+        delMult -= Metodos.Metodo2;
+        delMult("Olá novamente");
+    }
+}
+```
+
+---
+
+## Aplicando ao CRUD
+
+Agora, vamos aplicar esse conceito a um CRUD de usuário. Quando cadastramos um usuário, podemos querer realizar várias operações, como:
+
+1. Salvar no banco de dados.
+2. Enviar um e-mail de boas-vindas.
+3. Criar um log de auditoria.
+
+Usamos um **delegate multicast** para executar todas essas operações automaticamente:
+
+```csharp
+public class UsuarioServico
+{
+    public static void SalvarNoBanco(string nome)
+    {
+        Console.WriteLine($"Usuário {nome} salvo no banco de dados.");
+    }
+
+    public static void EnviarEmailBoasVindas(string nome)
+    {
+        Console.WriteLine($"E-mail de boas-vindas enviado para {nome}.");
+    }
+
+    public static void CriarLog(string nome)
+    {
+        Console.WriteLine($"Log: Usuário {nome} foi cadastrado.");
+    }
+}
+
+public delegate void OperacaoCadastro(string nome);
+
+class Program
+{
+    static void Main()
+    {
+        OperacaoCadastro operacoes = UsuarioServico.SalvarNoBanco;
+        operacoes += UsuarioServico.EnviarEmailBoasVindas;
+        operacoes += UsuarioServico.CriarLog;
+
+        operacoes("João");
+
+        Console.WriteLine("\nRemovendo envio de e-mail...\n");
+
+        operacoes -= UsuarioServico.EnviarEmailBoasVindas;
+        operacoes("Maria");
+    }
+}
+```
+
+Aqui, assim que cadastramos um usuário, todas as operações vinculadas ao delegate são executadas automaticamente.
+
+---
+
+### Comparando com Message Queues (MQ)
+
+Quando trabalhamos com sistemas distribuídos, usamos filas de mensagens para propagar eventos. Por exemplo:
+
+1. Um serviço publica uma mensagem "Usuário cadastrado" em uma fila.
+2. Vários consumidores pegam essa mensagem e realizam suas tarefas (salvar no banco, enviar e-mail, criar log).
+3. Se um consumidor for removido da fila, ele deixa de processar mensagens futuras.
+
+Isso é muito similar aos **delegates multicast**, onde adicionamos e removemos métodos dinamicamente.
+
+---
+## Métodos Anônimos e Expressões Lambda
+
+Além dos delegates multicast, podemos utilizar **métodos anônimos** e **expressões lambda** para simplificar nosso código.
+
+### **Método Anônimo**
+
+Um método anônimo permite definir uma função sem precisar nomeá-la explicitamente. Veja um exemplo em que usamos `Find` para buscar um nome em uma lista:
+
+```csharp
+List<string> nomes = new List<string> { "Alice", "Bob", "Carlos" };
+
+var resultado = nomes.Find(delegate(string nome)
+{
+    return nome.Equals("Bob");
+});
+
+Console.WriteLine(resultado);
+```
+
+### **Expressões Lambda**
+
+Uma expressão lambda é uma forma ainda mais concisa de escrever funções anônimas. O exemplo acima pode ser reescrito usando uma lambda:
+
+```csharp
+var resultadoLambda = nomes.Find(nome => nome.Equals("Bob"));
+Console.WriteLine(resultadoLambda);
+```
+
+Lambdas são úteis para simplificar código e torná-lo mais legível, especialmente ao trabalhar com delegates e LINQ.
+
+---
+
+
+## Delegates em C#: Predicate, Action e Func
+
+Em C#, **delegates** são referências a métodos que podem ser armazenadas em variáveis. Entre os tipos mais comuns, temos os **Predicate**, **Action** e **Func**, que oferecem formas simplificadas de trabalhar com delegação de métodos, tornando o código mais limpo e reutilizável.
+
+---
+
+### Delegate Predicate
+
+O **Predicate** é um delegate que sempre retorna um booleano (`true` ou `false`). Ele é geralmente usado para verificar se um elemento atende a uma condição específica.
+
+#### Exemplo:
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static bool MaiorQueCinco(int numero)
+    {
+        return numero > 5;
+    }
+
+    static void Main()
+    {
+        Predicate<int> verificaNumero = MaiorQueCinco;
+        Console.WriteLine(verificaNumero(7)); // True
+        Console.WriteLine(verificaNumero(3)); // False
+    }
+}
+```
+
+#### Aplicação prática:
+Um uso comum do `Predicate` é em métodos como `List<T>.Find`, que busca um item em uma lista com base em um critério.
+
+```csharp
+List<int> numeros = new List<int> { 1, 3, 5, 7, 9 };
+int resultado = numeros.Find(x => x > 5);
+Console.WriteLine(resultado); // 7
+```
+
+---
+
+### Delegate Action
+
+O **Action** é um delegate que não retorna valor (`void`). Ele é útil para definir métodos que executam uma ação sem precisar de um retorno.
+
+### Exemplo:
+```csharp
+using System;
+
+class Program
+{
+    static void ExibirMensagem(string mensagem)
+    {
+        Console.WriteLine(mensagem);
+    }
+
+    static void Main()
+    {
+        Action<string> meuDelegate = ExibirMensagem;
+        meuDelegate("Olá, Action!"); // Saída: Olá, Action!
+    }
+}
+```
+
+#### Aplicação prática:
+Um `Action` pode ser usado para iterar sobre listas e executar operações em cada elemento.
+
+```csharp
+List<string> nomes = new List<string> { "Ana", "Carlos", "Beatriz" };
+nomes.ForEach(nome => Console.WriteLine(nome));
+```
+
+---
+
+### Delegate Func
+
+O **Func** é um delegate que sempre retorna um valor. Ele pode receber até 16 parâmetros e deve definir o tipo de retorno no final da sua assinatura.
+
+### Exemplo:
+```csharp
+using System;
+
+class Program
+{
+    static int Soma(int a, int b)
+    {
+        return a + b;
+    }
+
+    static void Main()
+    {
+        Func<int, int, int> somaDelegate = Soma;
+        Console.WriteLine(somaDelegate(3, 4)); // 7
+    }
+}
+```
+
+### Aplicação prática:
+Podemos usar `Func` para aplicar transformações a elementos de uma lista, como dobrar os valores de uma sequência de números.
+
+```csharp
+List<int> numeros = new List<int> { 1, 2, 3, 4 };
+List<int> dobrados = numeros.ConvertAll(x => x * 2);
+Console.WriteLine(string.Join(", ", dobrados)); // 2, 4, 6, 8
+```
+
+---
+# Eventos em C# e o Uso de EventArgs
+
+## Introdução
+
+Eventos são um mecanismo poderoso em C# para permitir a comunicação entre diferentes partes de um programa sem criar um forte acoplamento entre elas. Um exemplo comum no dia a dia é quando um pedido é criado em um sistema de compras, disparando várias notificações, como e-mails e SMS.
+
+Neste documento, exploramos como funcionam os eventos em C#, com um foco especial no uso de **EventArgs**.
+
+---
+
+## Implementando Eventos com EventArgs
+
+Os eventos normalmente são acompanhados por **EventArgs**, que são usados para transportar informações sobre o evento para os assinantes. Isso permite um sistema mais flexível e escalável.
+
+### Exemplo prático: Pedido com Notificações
+
+Aqui temos um sistema onde, quando um pedido é criado, ele notifica diferentes serviços (e-mail e SMS):
+
+```csharp
+using System;
+
+namespace Eventos.Classes
+{
+    public class PedidoEventArgs : EventArgs
+    {
+        public string NumeroPedido { get; }
+        public string Email { get; }
+        public string Telefone { get; }
+
+        public PedidoEventArgs(string numeroPedido, string email, string telefone)
+        {
+            NumeroPedido = numeroPedido;
+            Email = email;
+            Telefone = telefone;
+        }
+    }
+
+    public class Email
+    {
+        public static void EnviarEmail(object sender, PedidoEventArgs e)
+        {
+            Console.WriteLine($"\ud83d\udce7 Enviando e-mail para {e.Email} sobre o pedido {e.NumeroPedido}");
+        }
+    }
+
+    public class Sms
+    {
+        public static void EnviarSms(object sender, PedidoEventArgs e)
+        {
+            Console.WriteLine($"\ud83d\udcf2 Enviando SMS para {e.Telefone} sobre o pedido {e.NumeroPedido}");
+        }
+    }
+
+    public delegate void PedidoEventHandler(object sender, PedidoEventArgs e);
+
+    public class Pedido
+    {
+        public event PedidoEventHandler? PedidoCriado;
+
+        public void CriarPedido(string numeroPedido, string email, string telefone)
+        {
+            Console.WriteLine($"\ud83d\uded2 Pedido {numeroPedido} criado!");
+            PedidoCriado?.Invoke(this, new PedidoEventArgs(numeroPedido, email, telefone));
+        }
+    }
+
+    internal class Program
+    {
+        public static void Main()
+        {
+            Pedido pedido = new Pedido();
+            pedido.PedidoCriado += Email.EnviarEmail;
+            pedido.PedidoCriado += Sms.EnviarSms;
+
+            pedido.CriarPedido("12345", "cliente@email.com", "11999999999");
+        }
+    }
+}
+```
+
+---
+
+## Por que usar EventArgs?
+
+O uso de `EventArgs` traz vários benefícios, como:
+
+1. **Flexibilidade**: Permite que assinantes do evento recebam informações detalhadas, evitando depender de variáveis globais.
+2. **Escalabilidade**: Novos dados podem ser adicionados sem alterar a assinatura do evento.
+3. **Boas Práticas**: Segue padrões recomendados do .NET, facilitando a compreensão do código por outros desenvolvedores.
+
+---
+
+
+Eventos são uma forma eficaz de permitir comunicação entre componentes de forma desacoplada. O uso de **EventArgs** melhora a organização do código, tornando-o mais modular e extensível. Esse conceito é amplamente utilizado em aplicações reais, como notificadores de pedidos, logs de auditoria e integrações com serviços externos.
+
+Com essa abordagem, conseguimos um código mais robusto, escalável e fácil de manter! 🚀
+
