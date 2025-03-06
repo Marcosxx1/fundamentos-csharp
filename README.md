@@ -4,6 +4,7 @@
 - [Métodos e Propriedades Estáticas](#métodos-e-propriedades-estáticas)
 - [List e ArrayList](#list-e-arraylist)
 - [`List<T>` e principais métodos de consultas LINQ](#listt-e-principais-métodos-deconsultas-linq)
+- [Delegate](#delegate)
 
 dotnet --list-sdks lsitar os sdks
 
@@ -507,3 +508,6 @@ int item = lista[1];
 - **Memória completa**: A `List<T>` possui toda a coleção na memória e sabe exatamente quantos itens ela contém.
 - **Acesso e alteração**:
   - Implementa uma variedade de métodos que permitem acessar e alterar a coleção.
+
+
+## Delegate
