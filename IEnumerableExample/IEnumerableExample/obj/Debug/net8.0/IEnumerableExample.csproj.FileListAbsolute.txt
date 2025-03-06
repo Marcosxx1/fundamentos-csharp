@@ -1,0 +1,15 @@
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\bin\Debug\net8.0\IEnumerableExample.exe
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\bin\Debug\net8.0\IEnumerableExample.deps.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\bin\Debug\net8.0\IEnumerableExample.runtimeconfig.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\bin\Debug\net8.0\IEnumerableExample.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\bin\Debug\net8.0\IEnumerableExample.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\IEnumerableExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\IEnumerableExample.AssemblyInfoInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\IEnumerableExample.AssemblyInfo.cs
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\IEnumerableExample.csproj.CoreCompileInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\IEnumerableExample.sourcelink.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\IEnumerableExample.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\refint\IEnumerableExample.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\IEnumerableExample.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\IEnumerableExample.genruntimeconfig.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\IEnumerableExample\IEnumerableExample\obj\Debug\net8.0\ref\IEnumerableExample.dll

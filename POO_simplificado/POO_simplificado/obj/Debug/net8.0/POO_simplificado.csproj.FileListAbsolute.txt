@@ -1,0 +1,15 @@
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\bin\Debug\net8.0\POO_simplificado.exe
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\bin\Debug\net8.0\POO_simplificado.deps.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\bin\Debug\net8.0\POO_simplificado.runtimeconfig.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\bin\Debug\net8.0\POO_simplificado.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\bin\Debug\net8.0\POO_simplificado.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\POO_simplificado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\POO_simplificado.AssemblyInfoInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\POO_simplificado.AssemblyInfo.cs
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\POO_simplificado.csproj.CoreCompileInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\POO_simplificado.sourcelink.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\POO_simplificado.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\refint\POO_simplificado.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\POO_simplificado.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\POO_simplificado.genruntimeconfig.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\POO_simplificado\POO_simplificado\obj\Debug\net8.0\ref\POO_simplificado.dll

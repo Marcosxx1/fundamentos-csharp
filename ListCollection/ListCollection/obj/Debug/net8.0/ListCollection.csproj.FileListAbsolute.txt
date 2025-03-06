@@ -1,0 +1,15 @@
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\bin\Debug\net8.0\ListCollection.exe
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\bin\Debug\net8.0\ListCollection.deps.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\bin\Debug\net8.0\ListCollection.runtimeconfig.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\bin\Debug\net8.0\ListCollection.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\bin\Debug\net8.0\ListCollection.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\ListCollection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\ListCollection.AssemblyInfoInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\ListCollection.AssemblyInfo.cs
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\ListCollection.csproj.CoreCompileInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\ListCollection.sourcelink.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\ListCollection.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\refint\ListCollection.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\ListCollection.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\ListCollection.genruntimeconfig.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\ListCollection\ListCollection\obj\Debug\net8.0\ref\ListCollection.dll

@@ -1,0 +1,15 @@
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\bin\Debug\net9.0\Heranca_modifAcesso.exe
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\bin\Debug\net9.0\Heranca_modifAcesso.deps.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\bin\Debug\net9.0\Heranca_modifAcesso.runtimeconfig.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\bin\Debug\net9.0\Heranca_modifAcesso.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\bin\Debug\net9.0\Heranca_modifAcesso.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\Heranca_modifAcesso.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\Heranca_modifAcesso.AssemblyInfoInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\Heranca_modifAcesso.AssemblyInfo.cs
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\Heranca_modifAcesso.csproj.CoreCompileInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\Heranca_modifAcesso.sourcelink.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\Heranca_modifAcesso.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\refint\Heranca_modifAcesso.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\Heranca_modifAcesso.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\Heranca_modifAcesso.genruntimeconfig.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Heranca_modifAcesso\Heranca_modifAcesso\obj\Debug\net9.0\ref\Heranca_modifAcesso.dll
