@@ -1,0 +1,15 @@
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\bin\Debug\net9.0\Delegates.exe
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\bin\Debug\net9.0\Delegates.deps.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\bin\Debug\net9.0\Delegates.runtimeconfig.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\bin\Debug\net9.0\Delegates.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\bin\Debug\net9.0\Delegates.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\Delegates.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\Delegates.AssemblyInfoInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\Delegates.AssemblyInfo.cs
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\Delegates.csproj.CoreCompileInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\Delegates.sourcelink.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\Delegates.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\refint\Delegates.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\Delegates.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\Delegates.genruntimeconfig.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Delegates\Delegates\obj\Debug\net9.0\ref\Delegates.dll
