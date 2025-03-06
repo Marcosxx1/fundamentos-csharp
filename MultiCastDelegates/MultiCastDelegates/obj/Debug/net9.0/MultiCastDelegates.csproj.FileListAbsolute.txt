@@ -1,0 +1,15 @@
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\bin\Debug\net9.0\MultiCastDelegates.exe
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\bin\Debug\net9.0\MultiCastDelegates.deps.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\bin\Debug\net9.0\MultiCastDelegates.runtimeconfig.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\bin\Debug\net9.0\MultiCastDelegates.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\bin\Debug\net9.0\MultiCastDelegates.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\MultiCastDelegates.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\MultiCastDelegates.AssemblyInfoInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\MultiCastDelegates.AssemblyInfo.cs
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\MultiCastDelegates.csproj.CoreCompileInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\MultiCastDelegates.sourcelink.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\MultiCastDelegates.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\refint\MultiCastDelegates.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\MultiCastDelegates.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\MultiCastDelegates.genruntimeconfig.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\MultiCastDelegates\MultiCastDelegates\obj\Debug\net9.0\ref\MultiCastDelegates.dll
