@@ -1,4 +1,5 @@
 ﻿using Eventos.classes;
+using Eventos.evento_usando_event_handler;
 
 internal class Program
 {
@@ -7,5 +8,13 @@ internal class Program
         Pedido pedido = new Pedido();
         pedido.PedidoCriado += Email.EnviaEmail;
         pedido.PedidoCriado += Sms.EnviaSms;
+        
+        pedido.CriarPedido("1", "email@email.com", "214312341");
+        
+        PedidoComEventHandler pedidoEventHandler = new PedidoComEventHandler();
+        pedidoEventHandler.PedidoCriado += EmailEvent.EnviaEmail;
+        pedidoEventHandler.PedidoCriado += SmsEvent.EnviaSms;
+        
+        pedidoEventHandler.CriarPedido();
     }
 }

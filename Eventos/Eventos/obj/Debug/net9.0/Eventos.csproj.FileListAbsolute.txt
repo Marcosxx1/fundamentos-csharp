@@ -1,0 +1,15 @@
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\bin\Debug\net9.0\Eventos.exe
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\bin\Debug\net9.0\Eventos.deps.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\bin\Debug\net9.0\Eventos.runtimeconfig.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\bin\Debug\net9.0\Eventos.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\bin\Debug\net9.0\Eventos.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\Eventos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\Eventos.AssemblyInfoInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\Eventos.AssemblyInfo.cs
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\Eventos.csproj.CoreCompileInputs.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\Eventos.sourcelink.json
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\Eventos.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\refint\Eventos.dll
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\Eventos.pdb
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\Eventos.genruntimeconfig.cache
+C:\Users\marco\RiderProjects\fundamentos-csharp\Eventos\Eventos\obj\Debug\net9.0\ref\Eventos.dll
